@@ -1,0 +1,10 @@
+.dice-container {
+    width: 100%;
+    text-align: center;
+}
+
+.dice-image {
+    width: 60px;
+    margin: auto;
+    justify-content: center;
+}
