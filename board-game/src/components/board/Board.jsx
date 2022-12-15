@@ -7,14 +7,17 @@ import { getRandomNumber } from "../../helpers/helpers";
 import DiceScore from "./dice-score/DiceScore"
 
 import CardDetailDisplay from "./card-detail-display/CardDetailDisplay"
+import WinnerMenu from "../game-menus/WinnerMenu";
 
 
 
 
-const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setShow, setWinner, setPlaying }) => {
+const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setPlaying, winnerMenu, setWinnerMenu }) => {
     const [playerTurn, setPlayerTurn] = useState(0);
     const [roll, setRoll] = useState(6);
     const [displayCard, setDisplayCard] = useState("");
+    const [winner, setWinner] = useState();
+
 
 
 
@@ -37,24 +40,27 @@ const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setShow, setWinne
                 setPlayerTurn(0);
             }
         } else {
-            setShow(true);
             setWinner(playerTurn + 1);
             setPlayerTurn(0);
             setRoll(0);
             setDisplayCard(data[0]["cardDetail"]);
+            setWinnerMenu(true)
         }
     }
 
     return (
         <div className="board-wrapper">
             <div className="card-detail-container">
-                <button className="dice-button"
-                    onClick={() => rollDoubleDice(numberOfPlayers)}
-                >
-                    Roll
-            </button>
-                <DiceScore roll={roll} />
+                {winnerMenu !== true ?
+                    <div className="card-details">
+                        <button className="dice-button" onClick={() => rollDoubleDice(numberOfPlayers)}>
+                            Roll
+                    </button>
+                        <DiceScore roll={roll} />
+                    </div>
+                    : <WinnerMenu winner={winner} />}
             </div>
+
             <div className="grid">
                 {data.map((card, index) => {
                     return (
@@ -70,10 +76,12 @@ const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setShow, setWinne
                 })}
             </div>
             <div className="card-detail-container">
-                <div>Player: {playerTurn + 1}</div>
-                <CardDetailDisplay displayCard={displayCard} />
+                <div className="card-details">
+                    <div className="player-turn">Player: {playerTurn + 1}</div>
+                    <CardDetailDisplay displayCard={displayCard} />
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

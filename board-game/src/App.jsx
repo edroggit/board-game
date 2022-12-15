@@ -8,9 +8,7 @@ import Board from "./components/board/Board"
 function App() {
   const [selectingPlayers, setSelectingPlayers] = useState(true);
   const [playing, setPlaying] = useState(false)
-  const [show, setShow] = useState(false);
-
-  const [winner, setWinner] = useState();
+  const [winnerMenu, setWinnerMenu] = useState(false)
 
 
 
@@ -29,8 +27,11 @@ function App() {
       }
       {
         playing && (
-          <Board playerScore={playerScore} setPlayerScore={setPlayerScore} numberOfPlayers={numberOfPlayers} setShow={setShow} setWinner={setWinner} setPlaying={setPlaying} />
+          <Board playerScore={playerScore} setPlayerScore={setPlayerScore} numberOfPlayers={numberOfPlayers} setPlaying={setPlaying} winnerMenu={winnerMenu} setWinnerMenu={setWinnerMenu} />
         )
+      }
+      {
+
       }
 
     </div>

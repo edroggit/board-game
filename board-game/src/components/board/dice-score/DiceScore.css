@@ -4,7 +4,9 @@
 }
 
 .dice-image {
-    width: 60px;
+    display: flex;
+    width: 90px;
     margin: auto;
     justify-content: center;
+    align-items: center;
 }
