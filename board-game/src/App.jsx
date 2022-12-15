@@ -1,14 +1,7 @@
 import './App.css'
 import { useState } from "react";
 
-import StartMenu from "./components/game-menus/start-menu";
-import { getRandomNumber } from "./helpers/helpers";
-
-import DiceScore from "./components/board/dice-score/DiceScore"
-import data from "./data/data";
-
-import PlayerToken from "./components/board/player-token/PlayerToken";
-
+import StartMenu from "./components/game-menus/StartMenu";
 import Board from "./components/board/Board"
 
 
@@ -18,7 +11,6 @@ function App() {
   const [show, setShow] = useState(false);
 
   const [winner, setWinner] = useState();
-
 
 
 

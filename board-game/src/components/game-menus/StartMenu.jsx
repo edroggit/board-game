@@ -1,3 +1,5 @@
+import "./StartMenu.css";
+
 import { createInitialScore } from "../../helpers/helpers"
 
 const StartMenu = ({ setSelectingPlayers, setNumberOfPlayers, setPlayerScore, setPlaying }) => {
@@ -10,7 +12,7 @@ const StartMenu = ({ setSelectingPlayers, setNumberOfPlayers, setPlayerScore, se
   return (
     <div className="starting-menu-wrapper">
       <div className="starting-heading-wrapper">
-        <h1 className="heading">Select number of players</h1>
+        <h1>Select number of players</h1>
       </div>
       <div className="starting-buttons">
         <button

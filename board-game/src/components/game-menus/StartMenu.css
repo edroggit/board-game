@@ -1,0 +1,35 @@
+.starting-menu-wrapper {
+    margin: 75px auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--control);
+    border-radius: 20px;
+    /* border-radius: 1rem; */
+    border: 10px solid var(--color);
+    width: 60%;
+    padding: 30px;
+}
+
+.starting-heading-wrapper {
+    /* padding: 50px; */
+    font-size: small;
+}
+
+.starting-buttons {
+    display: flex;
+    flex-direction:column;
+    width: 25%;
+    margin: auto;
+    gap: 10px;
+}
+
+.start-button {
+    height: 50px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.start-button:hover {
+    cursor: pointer;
+}

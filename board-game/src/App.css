@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: "Righteous", cursive;
+  font-family: "Nerko One";
 }
 
 :root {
@@ -11,12 +11,20 @@
   --color: #fff;
   min-height: 100vh;
 }
- 
+
 body {
   background: linear-gradient(#d1e9fa 0 50%, #86c270 50%);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .container {

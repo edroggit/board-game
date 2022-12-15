@@ -46,9 +46,9 @@ const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setShow, setWinne
     }
 
     return (
-        <div>
+        <div className="board-wrapper">
             <div className="card-detail-container">
-                <button
+                <button className="dice-button"
                     onClick={() => rollDoubleDice(numberOfPlayers)}
                 >
                     Roll
@@ -57,9 +57,8 @@ const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setShow, setWinne
             </div>
             <div className="grid">
                 {data.map((card, index) => {
-                    console.log(card);
                     return (
-                        <div key={index} className="grid-card">
+                        <div key={card.index} className="grid-card">
                             {index["cardDetail"]}
                             {playerScore.map(({ player, score }) => {
                                 if (score === index) {
