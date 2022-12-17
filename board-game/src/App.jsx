@@ -9,13 +9,15 @@ import Gameboard from "./components/Gameboard"
 
 
 function App() {
-  const [selectingPlayers, setSelectingPlayers] = useState(false);
+  const [selectingPlayers, setSelectingPlayers] = useState(true);
   const [playing, setPlaying] = useState(false)
   const [winnerMenu, setWinnerMenu] = useState(false)
 
 
   const [numberOfPlayers, setNumberOfPlayers] = useState();
   const [playerScore, setPlayerScore] = useState([]);
+
+  console.log("playerScore", playerScore)
 
 
   return (

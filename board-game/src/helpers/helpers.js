@@ -9,7 +9,7 @@ export const createInitialScore = (numberOfPlayers) => {
   for (let i = 0; i < numberOfPlayers; i++) {
     arr.push({
       player: i,
-      score: 1,
+      score: 0,
     });
   }
   return arr;

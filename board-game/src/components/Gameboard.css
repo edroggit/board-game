@@ -1,3 +1,10 @@
 .game-grid {
     display: grid;
+    grid-template-columns: repeat(8,1fr);
+}
+
+.player-character {
+    width: 10px;
+    height: 10px;
+    background-color: red;
 }
