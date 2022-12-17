@@ -1,8 +1,16 @@
 import "./WinnerMenu.css"
 
-const WinnerMenu = ({ winner }) => {
+const WinnerMenu = ({ winner, setPlaying, setSelectingPlayers }) => {
+    const handleClick = () => {
+        setPlaying(false)
+        setSelectingPlayers(true)
+    }
     return (
-        <h1>Player {winner} won the game</h1>
+        <div>
+            <h1>Player {winner} won the game</h1>
+            <button onClick={handleClick}>Play again</button>
+
+        </div>
     )
 }
 

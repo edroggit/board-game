@@ -22,7 +22,6 @@ function App() {
 
   return (
     <div className="container">
-      <Gameboard />
       {
         selectingPlayers && (
           <StartMenu
@@ -32,7 +31,7 @@ function App() {
       }
       {
         playing && (
-          <Board playerScore={playerScore} setPlayerScore={setPlayerScore} numberOfPlayers={numberOfPlayers} setPlaying={setPlaying} winnerMenu={winnerMenu} setWinnerMenu={setWinnerMenu} />
+          <Board setSelectingPlayers={setSelectingPlayers} playerScore={playerScore} setPlayerScore={setPlayerScore} numberOfPlayers={numberOfPlayers} setPlaying={setPlaying} winnerMenu={winnerMenu} setWinnerMenu={setWinnerMenu} />
         )
       }
 

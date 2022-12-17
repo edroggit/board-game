@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    cardDetail: "Start Card",
+    cardDetail: "This is card 1",
   },
   {
     id: 2,
@@ -93,8 +93,12 @@ const data = [
   },
   {
     id: 24,
-    cardDetail: "End Card",
+    cardDetail: "This is card 24",
   },
+  {
+    id: 25,
+    cardDetail: "This is card 25"
+  }
 ];
 
 export default data;
