@@ -5,11 +5,13 @@ import StartMenu from "./components/game-menus/StartMenu";
 import Board from "./components/board/Board"
 
 
+import Gameboard from "./components/Gameboard"
+
+
 function App() {
-  const [selectingPlayers, setSelectingPlayers] = useState(true);
+  const [selectingPlayers, setSelectingPlayers] = useState(false);
   const [playing, setPlaying] = useState(false)
   const [winnerMenu, setWinnerMenu] = useState(false)
-
 
 
   const [numberOfPlayers, setNumberOfPlayers] = useState();
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="container">
+      <Gameboard />
       {
         selectingPlayers && (
           <StartMenu
@@ -30,9 +33,7 @@ function App() {
           <Board playerScore={playerScore} setPlayerScore={setPlayerScore} numberOfPlayers={numberOfPlayers} setPlaying={setPlaying} winnerMenu={winnerMenu} setWinnerMenu={setWinnerMenu} />
         )
       }
-      {
 
-      }
 
     </div>
   )

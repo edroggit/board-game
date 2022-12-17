@@ -10,8 +10,6 @@ import CardDetailDisplay from "./card-detail-display/CardDetailDisplay"
 import WinnerMenu from "../game-menus/WinnerMenu";
 
 
-
-
 const Board = ({ playerScore, setPlayerScore, numberOfPlayers, setPlaying, winnerMenu, setWinnerMenu }) => {
     const [playerTurn, setPlayerTurn] = useState(0);
     const [roll, setRoll] = useState(6);
