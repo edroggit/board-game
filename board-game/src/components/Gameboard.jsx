@@ -3,7 +3,6 @@ import "./Gameboard.css"
 
 
 const Gameboard = ({ playerScore }) => {
-    // const FAKEPLAYERDATA = [{ player: 1, score: 1 }, { player: 2, score: 2 }, { player: 3, score: 1 }]
 
     const squares = [
         1, 2, 3, 4, 5, 6, 7, 8,

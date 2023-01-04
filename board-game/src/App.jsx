@@ -2,16 +2,17 @@ import './App.css'
 import { useState } from "react";
 
 import StartMenu from "./components/game-menus/StartMenu";
-import Board from "./components/board/Board"
-
-
-import Gameboard from "./components/Gameboard"
-
+import Board from "./components/board/Board";
 
 function App() {
   const [selectingPlayers, setSelectingPlayers] = useState(true);
   const [playing, setPlaying] = useState(false)
   const [winnerMenu, setWinnerMenu] = useState(false)
+  const [menu, setMenu] = useState({
+    playing: true,
+    selectingPlayers: true,
+    winnerMenu: true
+  })
 
 
   const [numberOfPlayers, setNumberOfPlayers] = useState();

@@ -38,7 +38,7 @@ const Board = ({ playerScore, setSelectingPlayers, setPlayerScore, numberOfPlaye
             newArray[playerTurn] = { player: playerTurn, score: 26 }
             setPlayerScore(newArray)
             setWinner(playerTurn + 1);
-            // setPlayerTurn(0);
+            setPlayerTurn(0);
             // setRoll(0);
             // setDisplayCard(data[0]["cardDetail"]);
             setWinnerMenu(true)
@@ -55,24 +55,9 @@ const Board = ({ playerScore, setSelectingPlayers, setPlayerScore, numberOfPlaye
                     </button>
                         <DiceScore roll={roll} />
                     </div>
-                    : <WinnerMenu winner={winner} setSelectingPlayers={setSelectingPlayers} setPlaying={setPlaying} />}
+                    : <WinnerMenu winner={winner} setWinnerMenu={setWinnerMenu} setPlayerScore={setPlayerScore} setSelectingPlayers={setSelectingPlayers} setPlaying={setPlaying} />}
             </div>
             <Gameboard playerScore={playerScore} />
-
-            {/* <div className="grid">
-                {data.map((card, index) => {
-                    return (
-                        <div key={card.index} className="grid-card">
-                            {index["cardDetail"]}
-                            {playerScore.map(({ player, score }) => {
-                                if (score === index) {
-                                    return <PlayerToken player={player} />;
-                                }
-                            })}
-                        </div>
-                    );
-                })}
-            </div> */}
             <div className="card-detail-container">
                 <div className="card-details">
                     <div className="player-turn">Player: {playerTurn + 1}</div>

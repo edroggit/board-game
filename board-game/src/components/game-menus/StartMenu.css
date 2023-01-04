@@ -33,3 +33,22 @@
 .start-button:hover {
     cursor: pointer;
 }
+
+.card-selection-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.card-selector {
+    width: 100%;
+    margin: auto;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.card-selector:hover {
+    cursor: pointer;
+}
