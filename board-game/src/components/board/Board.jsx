@@ -10,7 +10,7 @@ import WinnerMenu from "../game-menus/WinnerMenu";
 import Gameboard from "../Gameboard";
 
 
-const Board = ({ playerScore, setSelectingPlayers, setPlayerScore, numberOfPlayers, setPlaying, winnerMenu, setWinnerMenu }) => {
+const Board = ({ playerScore, setSelectingPlayers, setPlayerScore, numberOfPlayers, setPlaying, selectedCards, winnerMenu, setWinnerMenu }) => {
     const [playerTurn, setPlayerTurn] = useState(0);
     const [roll, setRoll] = useState(6);
     const [displayCard, setDisplayCard] = useState("");
