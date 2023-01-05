@@ -29,7 +29,7 @@ const StartMenu = ({ setSelectingPlayers, setNumberOfPlayers, setPlayerScore, se
     setNumOfCardsSelected(newCards.length)
     setSelectedCards(newCards)
 
-    if (newCards.length === 3) {
+    if (newCards.length === 24) {
       setDisableButton(false)
     } else {
       setDisableButton(true)

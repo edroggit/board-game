@@ -34,8 +34,6 @@ const Gameboard = ({ playerScore }) => {
                                 <div key={square.piecePosition} className="game-card" style={{ backgroundColor: "white", width: "100%", height: "50px" }}>
                                     {
                                         playerScore.map((player) => <>{square.piecePosition === player.score && <PlayerToken player={player} />}</>)
-
-
                                     }
                                 </div> :
                                 <div key={square.piecePosition} style={{ backgroundColor: "black", width: "100%", height: "50px", opacity: 0.9 }}></div>}
